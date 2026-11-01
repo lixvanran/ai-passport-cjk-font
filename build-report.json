@@ -1,0 +1,81 @@
+{
+  "profile": "standard",
+  "source_font": "C:\\Windows\\Fonts\\NotoSansSC-VF.ttf",
+  "elapsed_sec": 8.6,
+  "fonts": [
+    {
+      "name": "ap_font_12",
+      "glyphs": 8789,
+      "bitmap_bytes": 626238,
+      "dsc_bytes": 70320,
+      "cmap_count": 4,
+      "source_bytes": 4265351,
+      "c_path": "C:\\Users\\小白\\WorkBuddy AI\\2026-11-01-13-34-14\\ai-passport-font\\fonts\\ap_font_12.c",
+      "h_path": "C:\\Users\\小白\\WorkBuddy AI\\2026-11-01-13-34-14\\ai-passport-font\\fonts\\ap_font_12.h",
+      "px": 12,
+      "bpp": 4,
+      "weight": 400,
+      "line_height": 14,
+      "base_line": 3,
+      "codepoints": 8789,
+      "hanzi": 8105,
+      "symbols": 589,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "verified": true,
+      "verified_glyphs": 8789
+    },
+    {
+      "name": "ap_font_16",
+      "glyphs": 8621,
+      "bitmap_bytes": 1033117,
+      "dsc_bytes": 68976,
+      "cmap_count": 4,
+      "source_bytes": 6436438,
+      "c_path": "C:\\Users\\小白\\WorkBuddy AI\\2026-11-01-13-34-14\\ai-passport-font\\fonts\\ap_font_16.c",
+      "h_path": "C:\\Users\\小白\\WorkBuddy AI\\2026-11-01-13-34-14\\ai-passport-font\\fonts\\ap_font_16.h",
+      "px": 16,
+      "bpp": 4,
+      "weight": 400,
+      "line_height": 20,
+      "base_line": 5,
+      "codepoints": 8621,
+      "hanzi": 8105,
+      "symbols": 421,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "verified": true,
+      "verified_glyphs": 8621
+    },
+    {
+      "name": "ap_font_20_core",
+      "glyphs": 4184,
+      "bitmap_bytes": 754744,
+      "dsc_bytes": 33480,
+      "cmap_count": 3,
+      "source_bytes": 4485493,
+      "c_path": "C:\\Users\\小白\\WorkBuddy AI\\2026-11-01-13-34-14\\ai-passport-font\\fonts\\ap_font_20_core.c",
+      "h_path": "C:\\Users\\小白\\WorkBuddy AI\\2026-11-01-13-34-14\\ai-passport-font\\fonts\\ap_font_20_core.h",
+      "px": 20,
+      "bpp": 4,
+      "weight": 400,
+      "line_height": 24,
+      "base_line": 6,
+      "codepoints": 4184,
+      "hanzi": 3500,
+      "symbols": 589,
+      "levels": [
+        1
+      ],
+      "verified": true,
+      "verified_glyphs": 4184
+    }
+  ],
+  "total_flash_bytes": 2586875
+}

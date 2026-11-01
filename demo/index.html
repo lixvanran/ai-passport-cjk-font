@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Passport 中文位图字库</title>
+<style>
+  :root{
+    --bg:#0b0d12; --panel:#141821; --panel2:#1a1f2b; --line:#242b38;
+    --ink:#e6eaf2; --dim:#8b95a8; --accent:#4ec9a0; --warn:#e2564a; --amber:#e0a44a;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:14px/1.7 -apple-system,"Segoe UI","Microsoft YaHei",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:48px 28px 80px}
+  header{border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:36px}
+  h1{font-size:26px;font-weight:600;margin:0 0 10px;letter-spacing:.3px}
+  .sub{color:var(--dim);font-size:14px;margin:0}
+  .sub code{color:var(--accent);background:var(--panel);padding:1px 6px;border-radius:4px;font-size:13px}
+  h2{font-size:15px;font-weight:600;color:var(--dim);letter-spacing:1.4px;text-transform:uppercase;
+     margin:44px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .cols{display:grid;grid-template-columns:300px 1fr;gap:32px;align-items:start}
+  @media(max-width:820px){.cols{grid-template-columns:1fr}}
+  .device{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .device img{width:100%;display:block;border-radius:6px;image-rendering:pixelated}
+  .cap{color:var(--dim);font-size:12px;text-align:center;margin-top:10px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+  .card .k{color:var(--dim);font-size:12px;letter-spacing:.5px}
+  .card .v{font-size:22px;font-weight:600;margin-top:4px;font-variant-numeric:tabular-nums}
+  .card .n{color:var(--dim);font-size:12px;margin-top:2px}
+  table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+  th{color:var(--dim);font-weight:500;font-size:12px;letter-spacing:.5px}
+  td.mono{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;font-size:12px}
+  .ok{color:var(--accent)}
+  .tester{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
+  textarea{
+    width:100%;min-height:96px;resize:vertical;background:var(--panel2);color:var(--ink);
+    border:1px solid var(--line);border-radius:8px;padding:12px;font:14px/1.8 inherit;
+    outline:none;font-family:"Microsoft YaHei",system-ui,sans-serif;
+  }
+  textarea:focus{border-color:#3a4757}
+  .out{margin-top:14px;padding:14px;background:var(--panel2);border-radius:8px;
+       font-size:15px;line-height:2;word-break:break-all;min-height:56px}
+  .miss{color:var(--warn);background:rgba(226,86,74,.12);border:1px solid rgba(226,86,74,.45);
+        border-radius:3px;padding:0 2px;margin:0 1px}
+  .stat{display:flex;gap:22px;margin-top:12px;font-size:13px;color:var(--dim);flex-wrap:wrap}
+  .stat b{color:var(--ink);font-variant-numeric:tabular-nums}
+  .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .pill{background:var(--panel2);border:1px solid var(--line);color:var(--dim);border-radius:20px;
+        padding:4px 12px;font-size:12px;cursor:pointer;transition:.15s}
+  .pill:hover{border-color:var(--accent);color:var(--ink)}
+  .grid-img{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;
+            padding:10px;image-rendering:pixelated}
+  ul.notes{margin:0;padding-left:20px;color:var(--dim)}
+  ul.notes li{margin:8px 0}
+  ul.notes b{color:var(--ink);font-weight:500}
+  .warnbox{border-left:2px solid var(--amber);background:rgba(224,164,74,.07);
+           padding:12px 16px;border-radius:0 8px 8px 0;color:var(--dim);font-size:13px;margin-top:16px}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>AI Passport 中文位图字库</h1>
+  <p class="sub">
+    ESP32-C3 · 8 MB Flash · 无 PSRAM · ST7789P3 240×320 · LVGL 9.5 ——
+    覆盖《通用规范汉字表》<code>8105</code> 字，逐像素回读校验。
+  </p>
+</header>
+
+<h2>真机同像素</h2>
+<div class="cols">
+  <div class="device">
+    <img src="passport-240x320@3x.png" alt="240x320 界面预览（3 倍最近邻放大）">
+    <div class="cap">240×320 原生像素 · 3× 最近邻放大</div>
+  </div>
+  <div>
+    <div class="cards">
+      <div class="card"><div class="k">合计 Flash</div><div class="v">2.47 MB</div><div class="n">位图 + 字形描述</div></div>
+      <div class="card"><div class="k">汉字覆盖</div><div class="v">8105</div><div class="n">一级 3500 / 二级 3000 / 三级 1605</div></div>
+      <div class="card"><div class="k">逐像素校验</div><div class="v ok">0 处不一致</div><div class="n">21594 个字形全量回读</div></div>
+    </div>
+    <div class="warnbox">
+      这张图不是浏览器排的字。它是把生成的 <b>.c</b> 文件里的位图按 LVGL 的连续位流规则解码后，
+      逐字形贴到 240×320 画布上的结果——跑通它，等于证明「文件里的字节确实能拼成正确的界面」。
+    </div>
+  </div>
+</div>
+
+<h2>字体规格</h2>
+<table>
+  <thead><tr>
+    <th>字体</th><th>字号</th><th>汉字</th><th>符号</th><th>位图</th><th>字形描述</th><th>行高/基线</th><th>校验</th>
+  </tr></thead>
+  <tbody>
+    <tr><td class="mono">ap_font_12</td><td>12 px</td><td>8105 全表</td><td>589</td><td>611.6 KB</td><td>68.7 KB</td><td>14 / 3</td><td class="ok">8789 全过</td></tr>
+    <tr><td class="mono">ap_font_16</td><td>16 px</td><td>8105 全表</td><td>421</td><td>1008.9 KB</td><td>67.4 KB</td><td>20 / 5</td><td class="ok">8621 全过</td></tr>
+    <tr><td class="mono">ap_font_20_core</td><td>20 px</td><td>3500 一级</td><td>589</td><td>737.1 KB</td><td>32.7 KB</td><td>24 / 6</td><td class="ok">4184 全过</td></tr>
+  </tbody>
+</table>
+
+<h2>实时覆盖检测</h2>
+<div class="tester">
+  <textarea id="input" spellcheck="false">李燚 · 鑫淼犇骉赟燊垚 · 龘羴𠮷 · 魑魅魍魉 · 通行证 AI-8F3C</textarea>
+  <div class="pills">
+    <span class="pill" data-fill="李燚 鑫淼犇骉赟燊垚 魑魅魍魉 饕餮">生僻字</span>
+    <span class="pill" data-fill="龘羴𠮷猋驫">字表外</span>
+    <span class="pill" data-fill="永和九年，岁在癸丑。暮春之初，会于会稽山阴之兰亭，修禊事也。">文言</span>
+    <span class="pill" data-fill="编号 AI-8F3C-2026 签发 2026-11-01 有效期内">编号</span>
+  </div>
+  <div class="out" id="out"></div>
+  <div class="stat" id="stat"></div>
+</div>
+
+<h2>16 px 字形网格</h2>
+<img class="grid-img" src="glyph-grid@2x.png" alt="16px 字形网格">
+<div class="cap" style="text-align:left;margin-top:8px">
+  末行「鑫 燚 淼 犇 骉 赟 燊 垚」是二级 / 三级字，一级常用字表里没有。
+</div>
+
+<h2>几个必须踩对的细节</h2>
+<ul class="notes">
+  <li><b>位图是连续位流，不逐行对齐。</b>4bpp 字节数 = <code>ceil(w×h/2)</code>，不是 <code>ceil(w/2)×h</code>。
+      拿官方 <code>lv_font_montserrat_16.c</code> 反推验证：157 个字形，连续位流假设 157/157 吻合，逐行对齐只有 100/157。</li>
+  <li><b>cmap 只用 TINY 变体。</b>ASCII 走 <code>FORMAT0_TINY</code>，其余走 <code>SPARSE_TINY</code>。
+      <code>FORMAT0_FULL</code> 对稀疏字集传 NULL 不是「慢一点」，是直接崩。</li>
+  <li><b>单字体位图上限 1 MB。</b><code>bitmap_index</code> 默认只有 20 位。8105 字在 16 px / 4bpp 下已占 971.5 KB，
+      加 <code>ui</code> 档符号会到 1,048,589 字节——比上限多 13 字节。所以 16 px 只保留必备标点。</li>
+  <li><b>行高按核心字符量。</b>若把 <code>cp ≥ 0x2E80</code> 都算核心，标点区里的 <code>〱〲</code>
+      会把 16 px 行高从 19 撑到 31，一屏 4 行的布局直接崩。</li>
+</ul>
+
+<footer>
+  源字体 Noto Sans SC（SIL OFL 1.1）· 生成链 Python + Pillow，不依赖 Node 与 fontTools
+</footer>
+</div>
+
+<script src="coverage.js"></script>
+<script>
+(function(){
+  const C = window.COVERAGE;
+  const names = Object.keys(C.fonts);
+  const sets = {};
+  names.forEach(n => sets[n] = new Set(C.fonts[n]));
+
+  const input = document.getElementById('input');
+  const out = document.getElementById('out');
+  const stat = document.getElementById('stat');
+
+  function render(){
+    const text = input.value;
+    const chars = Array.from(text);
+    out.innerHTML = '';
+    let miss = 0;
+    const seen = new Set();
+    for (const ch of chars){
+      const cp = ch.codePointAt(0);
+      if (cp < 0x20){ out.appendChild(document.createTextNode(ch)); continue; }
+      const covered = sets['ap_font_16'].has(cp) || sets['ap_font_12'].has(cp);
+      if (covered){
+        out.appendChild(document.createTextNode(ch));
+      } else {
+        miss++; seen.add(ch);
+        const s = document.createElement('span');
+        s.className = 'miss'; s.textContent = ch;
+        s.title = 'U+' + cp.toString(16).toUpperCase().padStart(4,'0') + ' 无字形';
+        out.appendChild(s);
+      }
+    }
+    stat.innerHTML =
+      `<span>字符数 <b>${chars.length}</b></span>` +
+      `<span>缺字 <b style="color:${miss?'var(--warn)':'var(--accent)'}">${miss}</b></span>` +
+      `<span>唯一缺字 <b>${seen.size}</b>${seen.size? '：' + Array.from(seen).join(' ') : ''}</span>`;
+  }
+
+  document.querySelectorAll('.pill').forEach(p => {
+    p.addEventListener('click', () => { input.value = p.dataset.fill; render(); });
+  });
+  input.addEventListener('input', render);
+  render();
+})();
+</script>
+</body>
+</html>
