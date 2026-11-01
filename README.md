@@ -265,8 +265,15 @@ demo/
 
 ## 10. 授权
 
-- **生成工具**：本项目代码。
+本项目**分层授权**，因为生成出来的位图是字体的衍生作品，不能由我单方面改成 MIT：
+
+| 范围 | 授权 | 说明 |
+| --- | --- | --- |
+| 生成工具（`tools/`、`demo/`） | **MIT** | 见根目录 `LICENSE`，随便用 |
+| 字库产物（`fonts/*.c`、`*.h`） | **SIL OFL 1.1** | 是 Noto Sans SC 的位图衍生作品，必须沿用 OFL |
+| 字符表数据（`charsets/`） | 见下 | 公开字符集整理数据 |
+
 - **字符表数据**：`charsets/通用规范汉字表.txt` 取自 [rime-aca/character_set](https://github.com/rime-aca/character_set)，是公开的字符集整理数据；《通用规范汉字表》本身为国务院 2013 年发布的规范性文件。
-- **源字体**：Noto Sans SC，**SIL Open Font License 1.1**，允许商用、允许修改、允许再分发；衍生字体不能单独售卖，且需保留同一授权。
-- **生成产物**（`fonts/*.c`）是位图，属于 OFL 意义上的「字体衍生作品」，随源字体一并遵循 OFL 1.1。`fonts/OFL.txt` 已随附全文。
+- **源字体**：Noto Sans SC，SIL Open Font License 1.1，允许商用、允许修改、允许再分发；衍生字体不能单独售卖，且需保留同一授权。`fonts/OFL.txt` 已随附全文。
+- **为什么不能全 MIT**：OFL 要求衍生字体继续用 OFL，而位图字库在版权意义上就是字体的衍生作品。把 `fonts/*.c` 标成 MIT 会违反上游授权。
 - 若改用其它源字体（MiSans、HarmonyOS Sans、阿里巴巴普惠体等），请自行核对其商用条款——`--font` 换一条路径就能重建，生成链不绑定具体字族。
